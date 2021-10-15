@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background: #eee;
+    }
+    
+    #app {
+      width: 600px;
+      margin: 30px auto;
+      background: #fff;
+    }
+    
+    header {
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+    
+    main > ul {
+      list-style: none;
+    }
+    
+    main > ul > li {
+      box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.4);
+      margin: 10px;
+      padding: 10px;
+    }
+    
+    main .edit-area {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s;
+    }
+    
+    main > ul > li.edit .edit-area {
+      max-height: 40px;
+    }
+    
+    main .item {
+      display: flex;
+      align-items: center;
+    }
+      
+    main .text {
+      flex: 1;
+    }
+    
+    main li i {
+      padding: 5px;
+      font-size: 12px;
+      color: #999;
+      transition: all .3s;
+      cursor: pointer;
+    }
+    
+    main li i:hover {
+      color: #000;
+    }
+
+    
+    footer {
+      margin-top: 30px;
+      padding: 10px;
+      background: #666;
+      text-align: center;
+    }
+    
+    footer input {
+      line-height: 30px;
+      width: 200px;
+      border-radius: 4px;
+      border: none;
+    }
+    
+    footer button {
+      padding: 5px;
+    }
+
+  </style>
+  
+</head>
+<body>
+  <div id="app">
+    <header>待办事项</header>
+    <main>
+      <ul>
+        <li data-id=1 contenteditable>
+          <span class="text">事项1</span>
+          <i class="del">删除</i>
+          <div>
+            <input type="text" value="实现1"> <i class="edit">编辑</i>
+          </div>
+        </li>
+      </ul>
+    </main>
+    <footer>
+      <input type="text"> <button class="add">添加</button>
+    </footer>
+    
+  </div>
+ 
+</body>
+</html>
